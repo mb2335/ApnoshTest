@@ -45,20 +45,26 @@ eleventyNavigation:
                     </p>
                 </div>
                 <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
+                    First Name
+                    <input required type="text" id="first-name" name="first-name" placeholder="First Name">
+                </label>
+                <label>
+                    Last Name
+                    <input required type="text" id="last-name" name="last-name" placeholder="Last Name">
+                </label>
+                <label>
+                    Subject
+                    <select required autocomplete="off" id="subject" name="subject">
+                        <option value="" disabled selected>Select a Subject</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Support">Support</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </label>
                 <label>
                     Email
                     <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
                 </label>
                 <label class="cs-label-message">
                     Message
