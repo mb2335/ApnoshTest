@@ -83,15 +83,20 @@
         .cs-flex-group {
             display: flex;
             flex-wrap: wrap;
-            justify-content: left;
-            align-items: flex-start;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
             margin: auto;
-            /* 60px - 220px */
             margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-            /* 464px - 562px */
             max-width: clamp(29em, 60vw, 35.125em);
             width: 80vw;
             box-sizing: border-box;
+            height: 100vh; /* Make container take full viewport height */
+        }
+        
+        .cs-flex-group > * {
+            width: 50%; /* Occupy left half */
+            box-sizing: border-box;
+            text-align: left; /* Ensure content aligns to the left */
         }
 
         .cs-topper {
