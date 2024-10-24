@@ -29,10 +29,10 @@
             width: 100%;
 
             img {
-                position: right;
+                position: absolute;
                 top: 0;
                 left: 0;
-                height: 109%;
+                height: 100%;
                 width: 100%;
                 /* Makes image act like a background-image */
                 object-fit: cover;
@@ -43,14 +43,14 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                /* Black Color Overlay 
+                /* Black Color Overlay */
                 content: "";
                 opacity: 0.7;
                 display: block;
                 background: #000;
                 height: 100%;
                 width: 100%;
-                 prevents the cursor from interacting with it */
+                /* prevents the cursor from interacting with it */
                 pointer-events: none;
             }
         }
@@ -63,7 +63,7 @@
             /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
             /* 144px - 280px - leaving extra space for the navigation */
             /* changes on tablet */
-            padding: clamp(7em, 25.95vw, 17.5em) 0;
+            padding: clamp(9em, 25.95vw, 17.5em) 0;
 
             &:before {
                 position: absolute;
@@ -76,7 +76,7 @@
                 background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* FF3.6-15 */
                 background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* Chrome10-25,Safari5.1-6 */
                 height: 100%;
-                /* width: 1px; */
+                width: 1px;
             }
         }
 
@@ -102,7 +102,7 @@
 
         .cs-title {
             width: 100%;
-            color: var(--bodyTextColorBlack);
+            color: var(--bodyTextColorWhite);
             text-align: center;
         }
 
@@ -111,7 +111,7 @@
             margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
             /* 40px - 48px */
             margin-bottom: clamp(2.5rem, 4vw, 3rem);
-            color: var(--bodyTextColorBlack);
+            color: var(--bodyTextColorWhite);
             text-align: center;
         }
 
@@ -119,8 +119,6 @@
             margin-bottom: (16/16rem);
             height: initial;
             line-height: clamp(2.875em, 5.5vw, 3.5em);
-            color: var(--bodyTextColorWhite);
-            border-radius: 8px;
         }
 
         .cs-button-transparent {
@@ -130,7 +128,6 @@
             justify-content: center;
             align-items: center;
             border: 1px solid var(--bodyTextColorWhite);
-            border-radius: 8px;
             margin: 0 (8/16rem);
             background-color: transparent;
             /* 46px - 56px */
@@ -144,7 +141,6 @@
             line-height: clamp(2.875em, 5.5vw, 3.5em);
             font-weight: 700;
             color: #fff;
-            
 
             .cs-img {
                 display: block;
@@ -162,7 +158,6 @@
                 content: "";
                 opacity: 1;
                 /* this is what creates the grow affect on hover */
-                border-radius: 8px;
                 transform: scaleX(0);
                 display: block;
                 background: #000;
@@ -172,7 +167,6 @@
 
             &:hover {
                 &:before {
-                    border-radius: 8px;
                     transform: scaleX(1);
                 }
             }
@@ -206,7 +200,6 @@
         .cs-button-solid {
             margin-right: (20/16rem);
             margin-bottom: 0;
-            border-radius: 8px;
         }
     }
 }
@@ -214,8 +207,8 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25em) {
     #hero {
-        background: url("/assets/Background_Image.png");
-        background-position: right;
+        background: url("/assets/images/landing.jpg");
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         /* creates parallax effect on background image */
