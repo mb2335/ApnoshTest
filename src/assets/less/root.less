@@ -8,12 +8,12 @@
 @media only screen and (min-width: 0rem) {
     // Website colors
     :root {
-        --primary: #ffba19;
-        --primaryLight: #ffd675;
-        --secondary: #001f3f;
-        --secondaryLight: #001f3f;
+        --primary: #4ABD98;
+        --primaryLight: #4ABD98;
+        --secondary: #fafbfc;
+        --secondaryLight: #fafbfc;
         --headerColor: #1a1a1a;
-        --bodyTextColor: #4e4b66;
+        --bodyTextColor: #1a1a1a;
         --bodyTextColorWhite: #fafbfc;
 
         /* 13px - 16px */
@@ -75,16 +75,18 @@
         font-weight: bold;
 
         // Transition Properties
-        color: #000;
+        color: var(--bodyTextColorWhite);
         transition: color 0.3s;
         transition-delay: 0.1s;
         text-align: center;
+        border-radius: 8px;
 
         &:hover {
             color: #fff;
             &:before {
                 width: 100%;
             }
+            border-radius: 8px;
         }
 
         &:before {
@@ -101,6 +103,7 @@
             //Transition properties
             width: 0;
             transition: width 0.3s;
+            border-radius: 8px;
         }
     }
 
@@ -177,6 +180,7 @@
     button {
         &:hover {
             cursor: pointer;
+            border-radius: 8px;
         }
     }
 
@@ -546,6 +550,7 @@
 
         .cs-button-solid {
             display: none;
+            border-radius: 8px;
         }
 
         &:before {
@@ -1338,6 +1343,7 @@
             .buttons {
                 display: flex;
                 justify-content: center;
+                border-radius: 8px;
             }
 
             .cs-button-solid {
@@ -1345,6 +1351,8 @@
                 height: (53/16rem);
                 width: (250/16rem);
                 padding-top: (3/16rem);
+                border-radius: 8px;
+                color: var(--bodyTextColorWhite);
             }
         }
 
