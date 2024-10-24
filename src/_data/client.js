@@ -1,14 +1,14 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "Apnosh",
+    "email": "Apnosh@gmail.com",
+    "phoneForTel": "253-777-6986",
+    "phoneFormatted": "(253) 777-6986",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
+        "lineOne": "TBD",
+        "lineTwo": "TBD",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98023",
         "country": "US",
         "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
     },
@@ -17,5 +17,5 @@ module.exports = {
         "instagram": "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.example.com"
+    "domain": "https://www.apnosh.com"
 };

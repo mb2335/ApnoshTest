@@ -12,7 +12,7 @@
         /* prevents overflow from the lines extending past the screen width */
         overflow: hidden;
         /* changes on tablet */
-        padding: 100 (16/16rem);
+        padding: 0 (16/16rem);
         padding-bottom: (100/16rem);
         font-family: "Roboto", "Arial", sans-serif;
         /* Centers button */
@@ -24,7 +24,7 @@
             top: 0;
             left: 0;
             display: block;
-            height: 100%;
+            height:100%;
             /* Background Image */
             width: 100%;
 
@@ -32,7 +32,7 @@
                 position: right;
                 top: 0;
                 left: 0;
-                height: 109%;
+                height: 100%;
                 width: 100%;
                 /* Makes image act like a background-image */
                 object-fit: cover;
@@ -56,7 +56,10 @@
         }
 
         .cs-container {
-            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            display: flex;
             margin: auto;
             max-width: (1280/16em);
             width: 100%;
@@ -78,6 +81,7 @@
                 height: 100%;
                 /* width: 1px; */
             }
+
         }
 
         .cs-flex-group {
@@ -130,6 +134,7 @@
             justify-content: center;
             align-items: center;
             border: 1px solid var(--bodyTextColorWhite);
+            border-color: #4ABD98;
             border-radius: 8px;
             margin: 0 (8/16rem);
             background-color: transparent;
@@ -143,7 +148,7 @@
             /* 46px - 56px */
             line-height: clamp(2.875em, 5.5vw, 3.5em);
             font-weight: 700;
-            color: #fff;
+            color: #4ABD98;
             
 
             .cs-img {
@@ -187,7 +192,7 @@
         padding: 0 clamp(2em, 5vw, 2.5em);
 
         .cs-container {
-            padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+            padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(0em, 30.95vw, 15.5em) 0;
             &:after {
                 position: absolute;
                 top: 0;
@@ -214,7 +219,7 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25em) {
     #hero {
-        background: url("/assets/Background_Image.png");
+        background: url("/assets/");
         background-position: right;
         background-size: cover;
         background-repeat: no-repeat;
@@ -305,7 +310,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: 98%;
+        width: 100%;
         font-size: ~"min(1.8vw, 1em)";
 
         .card {
