@@ -129,6 +129,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            border-radius: 8px;
             border: 1px solid var(--bodyTextColorWhite);
             margin: 0 (8/16rem);
             background-color: transparent;
@@ -143,6 +144,7 @@
             line-height: clamp(2.875em, 5.5vw, 3.5em);
             font-weight: 700;
             color: #fff;
+            
 
             .cs-img {
                 display: block;
@@ -160,18 +162,18 @@
                 content: "";
                 opacity: 1;
                 /* this is what creates the grow affect on hover */
+                border-radius: 8px;
                 transform: scaleX(0);
                 display: block;
                 background: #000;
                 transition: transform 0.3s;
                 transform-origin: left;
-                border-radius: 8px;
             }
 
             &:hover {
                 &:before {
-                    transform: scaleX(1);
                     border-radius: 8px;
+                    transform: scaleX(1);
                 }
             }
         }
