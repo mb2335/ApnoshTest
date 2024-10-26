@@ -19,12 +19,12 @@ eleventyNavigation:
     <!--                    LANDING                   -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
+    <section id="int-hero"">
+       <!-- <h1 id="home-h">About Us</h1> -->
         <picture>
             <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
             <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <!--<img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">-->
         </picture>
 
     </section>
@@ -70,6 +70,45 @@ eleventyNavigation:
             </div>
         </div>
     </section>
+
+    <!-- ============================================ -->
+<!--                 Why Choose                   -->
+<!-- ============================================ -->
+
+<section id="why-choose-289">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Why Choose Us?</span>
+                <h2 class="cs-title">What Sets Apnosh Apart</h2>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/award.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Unbeatable Prices</h3>
+                <p class="cs-item-text">
+                    We believe in small businesses and their role in our communities, so we keep our prices well below market rates to make growth affordable and impactful.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild-black.svg" alt="icon" width="40" height="48">
+                <h3 class="cs-h3">A Dedicated Team</h3>
+                <p class="cs-item-text">
+                    Our team of designers and developers tailors solutions to your unique needs, ensuring every detail is crafted for your success in a competitive market.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/call.svg" alt="icon" width="48" height="48">
+                <h3 class="cs-h3">Comprehensive Support</h3>
+                <p class="cs-item-text">
+                    Beyond web services, we offer a full range of support to help you navigate business challenges and connect with a network of like-minded businesses.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
 
     {% include 'components/cta.html' %}
 
