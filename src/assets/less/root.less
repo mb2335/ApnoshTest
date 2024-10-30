@@ -8,8 +8,8 @@
 @media only screen and (min-width: 0rem) {
     // Website colors
     :root {
-        --primary: #4ABD98;
-        --primaryLight: #4ABD98;
+        --primary: #2C9D79;
+        --primaryLight: #2C9D79;
         --secondary: #fafbfc;
         --secondaryLight: #fafbfc;
         --headerColor: #1a1a1a;
@@ -61,6 +61,11 @@
     }
 
     // Button - can be replaced using CodeStitch's "Button" Stitches
+    .cs-button-wrapper {
+        display:flex;
+        width: 100%;
+    }
+
     .cs-button-solid {
         z-index: 1;
         position: relative;
@@ -823,7 +828,7 @@
                 text-decoration: none;
                 font-size: (16/16rem);
                 line-height: 1.5em;
-                color: var(--bodyTextColor);
+                color: #2C6F41;
                 transition: color 0.3s, background-color 0.3s;
 
                 &:hover {
@@ -883,11 +888,10 @@
         padding: 0 (16/16rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
         font-family: "Roboto", "Arial", sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         .cs-container {
             display: flex;
-            justify-content: flex-end;
+            justify-content: start;
             align-items: center;
             margin: auto;
             max-width: (1280/16rem);
@@ -905,8 +909,8 @@
             justify-content: center;
             align-items: center;
             /* margin-right auto pushes everything away from it to the right */
-            margin: 0 auto 0 0;
-            height: (65/16rem);
+            margin-right: auto;
+            height: (40/16rem);
             max-width: (350/16rem);
             width: 18.4%;
             padding: 0;
@@ -921,9 +925,10 @@
 
         .cs-ul {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-around;
+            text-align: center;
             align-items: center;
-            margin: 0;
+            margin-right: auto;
             width: 100%;
             padding: 0;
             /* 20px - 36px */
@@ -936,16 +941,21 @@
             /* prevent flexbox from squishing it */
             flex: none;
         }
-
+        
         .cs-li-link {
             position: relative;
             display: block;
             margin: 0;
+            width: 100%;
+            text-align: center;
             text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1vw, 1rem);
-            line-height: 1.5em;
-            color: var(--bodyTextColor);
+            line-height: normal;
+            color: #2C6F41;
+            text-transform: uppercase;
             &:hover {
                 &:before {
                     width: 100%;
@@ -1235,9 +1245,10 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     #footer {
-        background: #1c1c1c;
+        background: #2C9D79;
         padding: (84/16rem) 0 calc(20 / 16 * 1rem);
         font-size: ~"min(4vw, 1.2em)";
+        font-style: Inter;
 
         .left-section {
             margin: auto;
@@ -1250,23 +1261,34 @@
                 height: (32/16em);
                 width: auto;
                 text-align: center;
+                margin-bottom: (12/16rem);
 
                 img {
                     display: block;
                     height: 100%;
                     width: auto;
                 }
+                
             }
 
-            p {
+            li {
                 opacity: 0.9;
-                margin: auto;
-                width: 100%;
-                font-size: (14/16rem);
-                line-height: (27/14rem);
+                margin-bottom: (12/16rem);
+                list-style: none;
+                font-size: (18/16rem);
                 color: #fff;
-                text-align: center;
-            }
+
+                a {
+                    text-decoration: none;
+                    line-height: (21/18em);
+                    color: #fff;
+                    transition: color 0.3s;
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+            }             
+           
         }
 
         .right-section {
@@ -1285,12 +1307,15 @@
                     margin-bottom: 0;
                     padding: 0;
 
+
                     li {
                         opacity: 0.9;
                         margin-bottom: (12/16rem);
                         list-style: none;
                         font-size: (18/16rem);
                         color: #fff;
+                        font-weight: 700;
+                        text-transform: uppercase;
 
                         a {
                             text-decoration: none;
@@ -1306,10 +1331,11 @@
                         position: relative;
                         margin-bottom: (37/16rem);
                         text-transform: uppercase;
-                        font-size: (18/16rem);
+                        font-size: (22/16rem);
                         line-height: (21/18em);
                         font-weight: bold;
                         color: #fff;
+                        letter-spacing: 2.86px;
 
                         &:before {
                             position: absolute;
@@ -1413,13 +1439,45 @@
                 margin-left: 0;
                 text-align: left;
             }
+
+            li {
+                a {
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        bottom: calc(-3 / 16 * 1rem);
+                        left: 0;
+                        content: "";
+                        opacity: 1;
+                        display: block;
+                        background: var(--primary);
+                        height: (2/16rem);
+                        width: 0%;
+                        transition: width 0.3s;
+                    }
+
+                    &:hover {
+                        &:before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                margin-top: 0;
+
+                li:first-of-type {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .right-section {
             margin: 0;
             max-width: none;
-            width: (609/16rem);
-
+            width: (359/16rem);
+            justify-content: space-between;
             .lists {
                 margin: 0;
                 max-width: (769/16rem);

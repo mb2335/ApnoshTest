@@ -53,7 +53,7 @@
   #hero .cs-container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     margin: auto;
     max-width: 80em;
@@ -87,7 +87,7 @@
     /* 60px - 220px */
     margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
     /* 464px - 562px */
-    max-width: clamp(19em, 60vw, 35.125em);
+    max-width: clamp(19em, 60vw, 45.125em);
     width: 80vw;
     box-sizing: border-box;
   }
@@ -97,9 +97,9 @@
     text-align: center;
   }
   #hero .cs-title {
-    width: 100%;
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
     color: var(--bodyTextColorBlack);
-    text-align: center;
+    text-align: left;
   }
   #hero .cs-text {
     /* 32px - 40px */
@@ -107,7 +107,7 @@
     /* 40px - 48px */
     margin-bottom: clamp(2.5rem, 4vw, 3rem);
     color: var(--bodyTextColorBlack);
-    text-align: center;
+    text-align: left;
   }
   #hero .cs-button-solid {
     margin-bottom: 1rem;
@@ -115,6 +115,7 @@
     line-height: clamp(2.875em, 5.5vw, 3.5em);
     color: var(--bodyTextColorWhite);
     border-radius: 8px;
+    align-items: left;
   }
   #hero .cs-button-transparent {
     z-index: 1;
@@ -137,7 +138,7 @@
     /* 46px - 56px */
     line-height: clamp(2.875em, 5.5vw, 3.5em);
     font-weight: 700;
-    color: #4ABD98;
+    color: #fff;
   }
   #hero .cs-button-transparent .cs-img {
     display: block;

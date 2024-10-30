@@ -5,8 +5,8 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #4ABD98;
-    --primaryLight: #4ABD98;
+    --primary: #2C9D79;
+    --primaryLight: #2C9D79;
     --secondary: #fafbfc;
     --secondaryLight: #fafbfc;
     --headerColor: #1a1a1a;
@@ -49,6 +49,10 @@
     line-height: 1.5em;
     color: var(--bodyTextColor);
     text-align: inherit;
+  }
+  .cs-button-wrapper {
+    display: flex;
+    width: 100%;
   }
   .cs-button-solid {
     z-index: 1;
@@ -701,7 +705,7 @@
     text-decoration: none;
     font-size: 1rem;
     line-height: 1.5em;
-    color: var(--bodyTextColor);
+    color: #2C6F41;
     transition: color 0.3s, background-color 0.3s;
   }
   #cs-navigation .cs-li-link.cs-drop-link:hover {
@@ -743,11 +747,10 @@
     padding: 0 1rem;
     /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
     font-family: "Roboto", "Arial", sans-serif;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   #cs-navigation .cs-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: start;
     align-items: center;
     margin: auto;
     max-width: 80rem;
@@ -763,8 +766,8 @@
     justify-content: center;
     align-items: center;
     /* margin-right auto pushes everything away from it to the right */
-    margin: 0 auto 0 0;
-    height: 4.0625rem;
+    margin-right: auto;
+    height: 2.5rem;
     max-width: 21.875rem;
     width: 18.4%;
     padding: 0;
@@ -777,9 +780,10 @@
   }
   #cs-navigation .cs-ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+    text-align: center;
     align-items: center;
-    margin: 0;
+    margin-right: auto;
     width: 100%;
     padding: 0;
     /* 20px - 36px */
@@ -795,11 +799,16 @@
     position: relative;
     display: block;
     margin: 0;
+    width: 100%;
+    text-align: center;
     text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1vw, 1rem);
-    line-height: 1.5em;
-    color: var(--bodyTextColor);
+    line-height: normal;
+    color: #2C6F41;
+    text-transform: uppercase;
   }
   #cs-navigation .cs-li-link:hover:before {
     width: 100%;
@@ -1045,9 +1054,10 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   #footer {
-    background: #1c1c1c;
+    background: #2C9D79;
     padding: 5.25rem 0 calc(20 / 16 * 1rem);
     font-size: min(4vw, 1.2em);
+    font-style: Inter;
   }
   #footer .left-section {
     margin: auto;
@@ -1061,20 +1071,28 @@
     height: 2em;
     width: auto;
     text-align: center;
+    margin-bottom: 0.75rem;
   }
   #footer .left-section .logo img {
     display: block;
     height: 100%;
     width: auto;
   }
-  #footer .left-section p {
+  #footer .left-section li {
     opacity: 0.9;
-    margin: auto;
-    width: 100%;
-    font-size: 0.875rem;
-    line-height: 1.92857143rem;
+    margin-bottom: 0.75rem;
+    list-style: none;
+    font-size: 1.125rem;
     color: #fff;
-    text-align: center;
+  }
+  #footer .left-section li a {
+    text-decoration: none;
+    line-height: 1.16666667em;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  #footer .left-section li a:hover {
+    color: var(--primary);
   }
   #footer .right-section {
     margin: auto;
@@ -1100,6 +1118,8 @@
     list-style: none;
     font-size: 1.125rem;
     color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
   }
   #footer .right-section .lists ul li a {
     text-decoration: none;
@@ -1114,10 +1134,11 @@
     position: relative;
     margin-bottom: 2.3125rem;
     text-transform: uppercase;
-    font-size: 1.125rem;
+    font-size: 1.375rem;
     line-height: 1.16666667em;
     font-weight: bold;
     color: #fff;
+    letter-spacing: 2.86px;
   }
   #footer .right-section .lists ul h2:before {
     position: absolute;
@@ -1206,10 +1227,35 @@
     margin-left: 0;
     text-align: left;
   }
+  #footer .left-section li a {
+    position: relative;
+  }
+  #footer .left-section li a:before {
+    position: absolute;
+    bottom: calc(-3 / 16 * 1rem);
+    left: 0;
+    content: "";
+    opacity: 1;
+    display: block;
+    background: var(--primary);
+    height: 0.125rem;
+    width: 0%;
+    transition: width 0.3s;
+  }
+  #footer .left-section li a:hover:before {
+    width: 100%;
+  }
+  #footer .left-section:nth-of-type(3) {
+    margin-top: 0;
+  }
+  #footer .left-section:nth-of-type(3) li:first-of-type {
+    margin-bottom: 0;
+  }
   #footer .right-section {
     margin: 0;
     max-width: none;
-    width: 38.0625rem;
+    width: 22.4375rem;
+    justify-content: space-between;
   }
   #footer .right-section .lists {
     margin: 0;
