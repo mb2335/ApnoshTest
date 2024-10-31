@@ -51,8 +51,8 @@
     pointer-events: none;
   }
   #hero .cs-container {
-    flex-direction: column;
-    align-items: center;
+    flex-flow: row;
+    align-items: flex-start;
     justify-content: space-between;
     display: flex;
     margin: auto;
@@ -61,7 +61,7 @@
     /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
     /* 144px - 280px - leaving extra space for the navigation */
     /* changes on tablet */
-    padding: clamp(7em, 25.95vw, 17.5em) 0;
+    padding: clamp(7em, 25.95vw, 10.5em) 0;
   }
   #hero .cs-container:before {
     position: absolute;
@@ -78,18 +78,33 @@
     height: 100%;
     /* width: 1px; */
   }
+  #hero .cs-left {
+    position: relative;
+    height: 39.75em;
+    width: 64.4375em;
+    font-size: min(2.31vw, 0.7em);
+  }
   #hero .cs-flex-group {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     margin: auto;
     /* 60px - 220px */
     margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
     /* 464px - 562px */
-    max-width: clamp(19em, 60vw, 45.125em);
+    max-width: clamp(19em, 60vw, 65.125em);
     width: 80vw;
     box-sizing: border-box;
+  }
+  #hero .cs-right {
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto;
+    max-width: 38.5rem;
   }
   #hero .cs-topper {
     margin-bottom: 1rem;
@@ -100,6 +115,11 @@
     margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
     color: var(--bodyTextColorBlack);
     text-align: left;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 64px;
+    width: 778px;
   }
   #hero .cs-text {
     /* 32px - 40px */
@@ -108,14 +128,25 @@
     margin-bottom: clamp(2.5rem, 4vw, 3rem);
     color: var(--bodyTextColorBlack);
     text-align: left;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    width: 778px;
   }
   #hero .cs-button-solid {
     margin-bottom: 1rem;
-    height: initial;
+    height: auto;
+    width: 237px;
     line-height: clamp(2.875em, 5.5vw, 3.5em);
     color: var(--bodyTextColorWhite);
     border-radius: 8px;
     align-items: left;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
   }
   #hero .cs-button-transparent {
     z-index: 1;
@@ -123,14 +154,14 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--bodyTextColorWhite);
+    border: none;
     border-color: #4ABD98;
     border-radius: 8px;
-    margin: 0 0.5rem;
+    margin: 0 0.57142857rem;
     background-color: transparent;
     /* 46px - 56px */
     height: clamp(2.875em, 5.5vw, 3.5em);
-    width: 11.25rem;
+    width: 14.8125rem;
     box-sizing: border-box;
     padding: 0;
     text-decoration: none;
@@ -138,7 +169,9 @@
     /* 46px - 56px */
     line-height: clamp(2.875em, 5.5vw, 3.5em);
     font-weight: 700;
-    color: #fff;
+    color: black;
+    text-transform: uppercase;
+    font-style: normal;
   }
   #hero .cs-button-transparent .cs-img {
     display: block;
@@ -174,7 +207,7 @@
     padding: 0 clamp(2em, 5vw, 2.5em);
   }
   #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(0em, 30.95vw, 15.5em) 0;
+    padding: clamp(4em, 27.95vw, 10.5em) 0 clamp(0em, 30.95vw, 4.5em) 0;
   }
   #hero .cs-container:after {
     position: absolute;
@@ -220,57 +253,73 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   .services {
-    z-index: 100;
+    z-index: 0;
     position: relative;
-    border-top: 0.375em solid var(--primary);
     border-radius: 0.3125em;
     margin: auto;
-    margin-top: calc(-167 / 16 * 1em);
+    margin-top: calc(-64 / 16 * 1em);
     margin-bottom: 3.125em;
     background: #fff;
     max-width: 82.5em;
     width: 90%;
     padding: 3.125em 1.25em;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    background-color: #2C9D79;
+    border-radius: 15px;
   }
-  .services .card {
-    display: block;
+  .services-left {
+    position: relative;
+    height: 19.9375em;
+    width: 62.5em;
+    font-size: min(2.31vw, 0.7em);
+    margin-top: 50px;
+  }
+  .services-h {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 100% */
+    align-self: stretch;
+    color: white;
+  }
+  .services-text {
+    margin-top: 10px;
+    color: #FBFFE4;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 133.333% */
+    width: 706px;
+    height: 81px;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .services-right {
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: auto;
-    margin-bottom: 3.125em;
-    max-width: 22.3125em;
-    width: 100%;
+    max-width: 38.5rem;
   }
-  .services .card picture {
+  .services-button-solid {
+    margin-bottom: 1rem;
+    height: auto;
+    width: 293px;
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    color: var(--bodyTextColorBlack);
+    border-radius: 8px;
+    align-items: left;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 1.4375em;
-    background: var(--primary);
-    height: 5.5em;
-    width: 5.5em;
-  }
-  .services .card picture img {
-    height: 3em;
-    width: 3em;
-  }
-  .services .card h2 {
-    margin-bottom: 0.65em;
-    font-size: 2em;
-    line-height: 1.35em;
+    text-transform: uppercase;
     font-weight: 700;
-    color: #1a1a1a;
-    text-align: center;
-  }
-  .services .card p {
-    opacity: 0.7;
-    width: 100%;
-    line-height: 1.33333333em;
-    text-align: center;
-  }
-  .services .card:last-of-type {
-    margin-bottom: 0;
+    font-style: normal;
+    background-color: #F0FF8E;
+    text-decoration: none;
+    padding: auto;
   }
 }
 /* Inbetween */
@@ -282,18 +331,11 @@
     width: 100%;
     font-size: min(1.8vw, 1em);
   }
-  .services .card {
-    margin: 0;
-    max-width: 20.3125em;
-  }
 }
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
   .services {
     padding: 3.125em 5em;
-  }
-  .services .card {
-    max-width: 22.3125em;
   }
 }
 /* Dark mode */
